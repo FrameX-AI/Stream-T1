@@ -1,0 +1,1 @@
+torchrun --nproc_per_node=1 --master_port=29671 stream_scaling.py --config_path configs/stream_scaling.yaml --short_threshold 0.0 --long_threshold 0.2 --noise_fusion_sigma -0.1 --short_score_fusion_threshold 0.4
