@@ -12,11 +12,15 @@
   <a href="#" target="_blank">Zhendong Mao</a><sup>1,*</sup>
 </div>
 
+<br>
+
 <div>
   <sup>1</sup> University of Science and Technology of China,
   <sup>2</sup> FrameX.AI,
   <sup>3</sup> Independent Researcher
 </div>
+
+<br>
 
 <sub><sup>*</sup> Corresponding author &nbsp;&middot;&nbsp; <sup>&dagger;</sup> Project lead</sub>
 
