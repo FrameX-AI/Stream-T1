@@ -39,36 +39,8 @@ While Test-Time Scaling (TTS) offers a promising direction to enhance video gene
 2. **Stream‑Scaled Reward Pruning**: comprehensively evaluates generated candidates to strike an optimal balance between local spatial aesthetics and global temporal coherence by integrating immediate short-term assessments with sliding-window-based long-term evaluations; 
 3. **Stream‑Scaled Memory Sinking**: dynamically routes the context evicted from KV-cache into distinct updating pathways guided by the reward feedback, ensuring that previously generated visual information effectively anchors and guides the subsequent video stream.
 
-<!-- <p align="center">
-    <img src="assets/pipeline.png" width="1024"/>
-</p> -->
-
-### Examples
-
-#### 5s
 <p align="center">
-  <video height="400" controls style="margin:0 8px;">
-    <source src="assets/5s/1.mp4" type="video/mp4">
-  </video>
-  <video height="400" controls style="margin:0 8px;">
-    <source src="assets/5s/2.mp4" type="video/mp4">
-  </video>
-  <video height="400" controls style="margin:0 8px;">
-    <source src="assets/5s/3.mp4" type="video/mp4">
-  </video>
-</p>
-
-#### 30s
-<p align="center">
-  <video height="400" controls style="margin:0 8px;">
-    <source src="assets/30s/1.mp4" type="video/mp4">
-  </video>
-  <video height="400" controls style="margin:0 8px;">
-    <source src="assets/30s/2.mp4" type="video/mp4">
-  </video>
-  <video height="400" controls style="margin:0 8px;">
-    <source src="assets/30s/3.mp4" type="video/mp4">
-  </video>
+    <img src="assets/pipeline.png" width="800"/>
 </p>
 
 ## TODO List
