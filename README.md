@@ -1,7 +1,61 @@
-# Stream-T1: Test-Time Scaling for Streaming Video Generation
+<div align="center">
+
+<h1>Stream-T1: <br> Test-Time Scaling for Streaming Video Generation
+
+<div>
+  <a href="#" target="_blank"><strong>Bin Wu</strong></a><sup>1</sup>,
+  <a href="#" target="_blank"><strong>Shaojin Wu</strong></a><sup>3,&dagger;</sup>,
+  <a href="https://corleone-huang.github.io/" target="_blank"><strong>Mengqi Huang</strong></a><sup>1,&dagger;</sup>,
+  <a href="#" target="_blank">Wenchuan Wang</a><sup>1</sup>,
+  <a href="#" target="_blank">Yuxin Wang</a><sup>2</sup>,
+  <a href="#" target="_blank"> Chunxiao Liu</a><sup>3</sup>,
+  <a href="#" target="_blank">Zhendong Mao</a><sup>1,*</sup>
+</div>
+
+<br>
+
+<div>
+  <sup>1</sup> University of Science and Technology of China,
+  <sup>2</sup> FrameX.AI,
+  <sup>3</sup> Independent Researcher
+</div>
+
+<br>
+
+<sub><sup>*</sup> Corresponding author &nbsp;&middot;&nbsp; <sup>&dagger;</sup> Project lead</sub>
+
+<br>
+
 <a href="https://stream-t1.github.io/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
 <a href="https://arxiv.org/pdf/2505.02192"><img src="https://img.shields.io/badge/arXiv-2505.02192-b31b1b.svg"></a>
 <a href="https://www.apache.org/licenses/LICENSE-2.0.txt"><img src="https://img.shields.io/badge/License-Apache-yellow"></a>
+
+## Overview
+While Test-Time Scaling (TTS) offers a promising direction to enhance video generation without the surging costs of training, current test-time video generation methods based on diffusion models suffer from exorbitant candidate exploration costs and lack temporal guidance. To address these structural bottlenecks, we propose shifting the focus to streaming video generation. We identify that its chunk-level synthesis and few denoising steps are intrinsically suited for TTS, significantly lowering computational overhead while enabling fine-grained temporal control. Driven by this insight, we introduced Stream-T1, a pioneering comprehensive TTS framework exclusively tailored for streaming video generation. Evaluated on both 5s and 30s comprehensive video benchmarks, Stream-T1 demonstrates profound superiority, significantly improving temporal consistency, motion smoothness, and frame-level visual quality.
+
+### Method
+1. **Stream‑Scaled Noise Propagation**: actively refines the initial latent noise of the generating chunk using historically proven, high-quality previous chunk noise, effectively establishes temporal dependency and utilizing the historical Gaussian prior to guide the current generation;
+2. **Stream‑Scaled Reward Pruning**: comprehensively evaluates generated candidates to strike an optimal balance between local spatial aesthetics and global temporal coherence by integrating immediate short-term assessments with sliding-window-based long-term evaluations; 
+3. **Stream‑Scaled Memory Sinking**: dynamically routes the context evicted from KV-cache into distinct updating pathways guided by the reward feedback, ensuring that previously generated visual information effectively anchors and guides the subsequent video stream.
+
+<p align="center">
+    <img src="assets/pipeline.png" width="1024"/>
+</p>
+
+### Examples
+#### 5s
+<p align="center">
+    <img src="assets/5s/1.mp4" alt="视频1" height="400" width="auto" style="margin:0 8px;"/>
+    <img src="assets/5s/2.mp4" alt="视频2" height="400" width="auto" style="margin:0 8px;"/>
+    <img src="assets/5s/3.mp4" alt="视频3" height="400" width="auto" style="margin:0 8px;"/>
+</p>
+
+#### 30s
+<p align="center">
+    <img src="assets/30s/1.mp4" alt="视频1" height="400" width="auto" style="margin:0 8px;"/>
+    <img src="assets/30s/2.mp4" alt="视频2" height="400" width="auto" style="margin:0 8px;"/>
+    <img src="assets/30s/3.mp4" alt="视频3" height="400" width="auto" style="margin:0 8px;"/>
+</p>
 
 ## TODO List
 
@@ -49,4 +103,5 @@ Don't forget to cite this source if it proves useful in your research!
 ```
 ```
 ## Acknowledgement:
-LongLive: the codebase and algorithm we built upon. Thanks for their wonderful work.
+- LongLive: the codebase and algorithm we built upon. Thanks for their wonderful work.
+- HPSv3 and videoalign: the reward model we use. Thanks for their wonderful work.
