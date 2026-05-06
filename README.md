@@ -47,12 +47,6 @@ bash stream_scaling.sh
 ## Citation:
 Don't forget to cite this source if it proves useful in your research!
 ```
-@article{wang2025dualreal,
-  title={Stream-T1: Test-Time Scaling for Streaming Video Generation},
-  author={Wang, Wenchuan and Huang, Mengqi and Tu, Yijing and Mao, Zhendong},
-  journal={arXiv preprint arXiv:2505.02192},
-  year={2025}
-}
 ```
 ## Acknowledgement:
 LongLive: the codebase and algorithm we built upon. Thanks for their wonderful work.
