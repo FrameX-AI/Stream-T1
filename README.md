@@ -1,4 +1,6 @@
-<h1>Stream-T1: <br> Test-Time Scaling for Streaming Video Generation
+<div align="center">
+
+<h1>Stream-T1: <br> Test-Time Scaling for Streaming Video Generation</h1>
 
 <div>
   <a href="#" target="_blank"><strong>Bin Wu</strong></a><sup>1</sup>,
@@ -22,11 +24,12 @@
 
 <sub><sup>*</sup> Corresponding author &nbsp;&middot;&nbsp; <sup>&dagger;</sup> Project lead</sub>
 
-<br>
+<br><br>
 
-<a href="https://stream-t1.github.io/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
-<a href="https://arxiv.org/pdf/2505.02192"><img src="https://img.shields.io/badge/arXiv-2505.02192-b31b1b.svg"></a>
-<a href="https://www.apache.org/licenses/LICENSE-2.0.txt"><img src="https://img.shields.io/badge/License-Apache-yellow"></a>
+[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://stream-t1.github.io/)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](#) <!-- arXiv link to be added -->
+
+</div>
 
 ## Overview
 While Test-Time Scaling (TTS) offers a promising direction to enhance video generation without the surging costs of training, current test-time video generation methods based on diffusion models suffer from exorbitant candidate exploration costs and lack temporal guidance. To address these structural bottlenecks, we propose shifting the focus to streaming video generation. We identify that its chunk-level synthesis and few denoising steps are intrinsically suited for TTS, significantly lowering computational overhead while enabling fine-grained temporal control. Driven by this insight, we introduced Stream-T1, a pioneering comprehensive TTS framework exclusively tailored for streaming video generation. Evaluated on both 5s and 30s comprehensive video benchmarks, Stream-T1 demonstrates profound superiority, significantly improving temporal consistency, motion smoothness, and frame-level visual quality.
@@ -36,9 +39,9 @@ While Test-Time Scaling (TTS) offers a promising direction to enhance video gene
 2. **Stream‑Scaled Reward Pruning**: comprehensively evaluates generated candidates to strike an optimal balance between local spatial aesthetics and global temporal coherence by integrating immediate short-term assessments with sliding-window-based long-term evaluations; 
 3. **Stream‑Scaled Memory Sinking**: dynamically routes the context evicted from KV-cache into distinct updating pathways guided by the reward feedback, ensuring that previously generated visual information effectively anchors and guides the subsequent video stream.
 
-<p align="center">
+<!-- <p align="center">
     <img src="assets/pipeline.png" width="1024"/>
-</p>
+</p> -->
 
 ### Examples
 #### 5s
