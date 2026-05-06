@@ -51,7 +51,7 @@ While Test-Time Scaling (TTS) offers a promising direction to enhance video gene
 The inference are conducted on 1 A800 GPU (80GB VRAM)
 ## Setup
 ```
-git clone https://github.com/Ttttttttyj/Stream-T1.git
+git clone https://github.com/FrameX-AI/Stream-T1.git
 cd Stream-T1
 
 cd metrics
