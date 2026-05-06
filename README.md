@@ -44,18 +44,31 @@ While Test-Time Scaling (TTS) offers a promising direction to enhance video gene
 </p> -->
 
 ### Examples
+
 #### 5s
 <p align="center">
-    <img src="assets/5s/1.mp4" alt="视频1" height="400" width="auto" style="margin:0 8px;"/>
-    <img src="assets/5s/2.mp4" alt="视频2" height="400" width="auto" style="margin:0 8px;"/>
-    <img src="assets/5s/3.mp4" alt="视频3" height="400" width="auto" style="margin:0 8px;"/>
+  <video height="400" controls style="margin:0 8px;">
+    <source src="assets/5s/1.mp4" type="video/mp4">
+  </video>
+  <video height="400" controls style="margin:0 8px;">
+    <source src="assets/5s/2.mp4" type="video/mp4">
+  </video>
+  <video height="400" controls style="margin:0 8px;">
+    <source src="assets/5s/3.mp4" type="video/mp4">
+  </video>
 </p>
 
 #### 30s
 <p align="center">
-    <img src="assets/30s/1.mp4" alt="视频1" height="400" width="auto" style="margin:0 8px;"/>
-    <img src="assets/30s/2.mp4" alt="视频2" height="400" width="auto" style="margin:0 8px;"/>
-    <img src="assets/30s/3.mp4" alt="视频3" height="400" width="auto" style="margin:0 8px;"/>
+  <video height="400" controls style="margin:0 8px;">
+    <source src="assets/30s/1.mp4" type="video/mp4">
+  </video>
+  <video height="400" controls style="margin:0 8px;">
+    <source src="assets/30s/2.mp4" type="video/mp4">
+  </video>
+  <video height="400" controls style="margin:0 8px;">
+    <source src="assets/30s/3.mp4" type="video/mp4">
+  </video>
 </p>
 
 ## TODO List
@@ -106,3 +119,5 @@ Don't forget to cite this source if it proves useful in your research!
 ## Acknowledgement:
 - LongLive: the codebase and algorithm we built upon. Thanks for their wonderful work.
 - HPSv3 and videoalign: the reward model we use. Thanks for their wonderful work.
+## License
+See [LICENSE](LICENSE).
