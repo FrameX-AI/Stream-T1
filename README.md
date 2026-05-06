@@ -3,7 +3,7 @@
 <h1>Stream-T1: <br> Test-Time Scaling for Streaming Video Generation</h1>
 
 <div>
-  <a href="#" target="_blank"><strong>Bin Wu</strong></a><sup>1</sup>,
+  <a href="#" target="_blank"><strong>Yijing Tu</strong></a><sup>1</sup>,
   <a href="#" target="_blank"><strong>Shaojin Wu</strong></a><sup>3,&dagger;</sup>,
   <a href="https://corleone-huang.github.io/" target="_blank"><strong>Mengqi Huang</strong></a><sup>1,&dagger;</sup>,
   <a href="#" target="_blank">Wenchuan Wang</a><sup>1</sup>,
