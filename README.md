@@ -1,5 +1,3 @@
-<div align="center">
-
 <h1>Stream-T1: <br> Test-Time Scaling for Streaming Video Generation
 
 <div>
