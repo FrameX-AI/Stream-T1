@@ -25,7 +25,7 @@
 <sub><sup>*</sup> Corresponding author &nbsp;&middot;&nbsp; <sup>&dagger;</sup> Project lead</sub>
 
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://stream-t1.github.io/)
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](#) <!-- arXiv link to be added -->
+[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/pdf/2605.04461)
 
 </div>
 
@@ -85,6 +85,15 @@ bash stream_scaling.sh
 ## Citation:
 Don't forget to cite this source if it proves useful in your research!
 ```
+@misc{tu2026streamt1testtimescalingstreaming,
+      title={Stream-T1: Test-Time Scaling for Streaming Video Generation}, 
+      author={Yijing Tu and Shaojin Wu and Mengqi Huang and Wenchuan Wang and Yuxin Wang and Chunxiao Liu and Zhendong Mao},
+      year={2026},
+      eprint={2605.04461},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2605.04461}, 
+}
 ```
 ## Acknowledgement:
 - LongLive: the codebase and algorithm we built upon. Thanks for their wonderful work.
