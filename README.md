@@ -55,7 +55,7 @@ git clone https://github.com/FrameX-AI/Stream-T1.git
 cd Stream-T1
 
 cd metrics
-https://github.com/KlingAIResearch/VideoAlign.git
+git clone https://github.com/KlingAIResearch/VideoAlign.git
 ```
 
 ## Environment
