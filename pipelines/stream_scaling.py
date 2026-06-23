@@ -355,6 +355,7 @@ class StreamT1CausalInferencePipeline(torch.nn.Module):
             video = self.vae.decode_to_pixel(long_tensor_video.to(device), use_cache=False)
             video = (video * 0.5 + 0.5).clamp(0, 1)
             video = rearrange(video, "b t c h w -> b t h w c").cpu()
+            video = 255.0 * video
             self.vae.model.clear_cache()
 
             long_output_folder = os.path.join(output_folder, str(block_idx))

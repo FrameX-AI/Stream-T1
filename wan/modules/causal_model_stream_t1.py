@@ -262,7 +262,7 @@ class CausalWanSelfAttention(nn.Module):
             evicted_k = None
             evicted_v = None
             cache_update_info = None
-            is_recompute = current_end <= kv_cache["global_end_index"].item() and current_start > 0
+            is_recompute = current_end <= kv_cache["global_end_index"].item() and current_start > 0 # 保护已有 sink 区域和 cache 指针
             if self.local_attn_size != -1 and (current_end > kv_cache["global_end_index"].item()) and (
                     num_new_tokens + kv_cache["local_end_index"].item() > kv_cache_size):
                 # Calculate the number of new tokens added in this step
@@ -407,10 +407,10 @@ class CausalWanSelfAttention(nn.Module):
 
                         "new_k": k[:, roped_offset:roped_offset + write_len],
                         "new_v": v[:, roped_offset:roped_offset + write_len],
-                        "sink_start_index" :sink_start_index if ema else None,
-                        "sink_end_index" : sink_end_index if ema else None,
-                        "updated_sink_k": updated_sink_k if ema else None,
-                        "updated_sink_v": updated_sink_v if ema else None,
+                        "sink_start_index" :sink_start_index if (ema or (append and current_sink_size == self.max_sink_size)) else None,
+                        "sink_end_index" : sink_end_index if (ema or (append and current_sink_size == self.max_sink_size)) else None,
+                        "updated_sink_k": updated_sink_k if (ema or (append and current_sink_size == self.max_sink_size)) else None,
+                        "updated_sink_v": updated_sink_v if (ema or (append and current_sink_size == self.max_sink_size)) else None,
                         "current_end": current_end,
                         "is_recompute": is_recompute
                     }
